@@ -80,8 +80,8 @@ func read(r io.Reader) []string {
 func outData(args []string, b *bytes.Buffer) error {
 
 	if len(args) < 2 {
-		outResult(os.Stdout, b)
-		return nil
+		err := outResult(os.Stdout, b)
+		return err
 	}
 
 	path := args[1]
