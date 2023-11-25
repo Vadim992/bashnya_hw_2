@@ -106,7 +106,8 @@ func TestID(t *testing.T) {
 	for _, tt := range tableTest {
 		t.Run(tt.name, func(t *testing.T) {
 
-			CLI.QueueFlags = priorityqueue.Queue{priorityqueue.NewItem("i", CLI.PriorityMap["i"]), priorityqueue.NewItem("d", CLI.PriorityMap["d"])}
+			CLI.QueueFlags = priorityqueue.Queue{priorityqueue.NewItem("i", CLI.PriorityMap["i"]),
+				priorityqueue.NewItem("d", CLI.PriorityMap["d"])}
 
 			sort.SliceStable(CLI.QueueFlags, CLI.QueueFlags.Less)
 
@@ -154,7 +155,8 @@ func TestIU(t *testing.T) {
 	for _, tt := range tableTest {
 		t.Run(tt.name, func(t *testing.T) {
 
-			CLI.QueueFlags = priorityqueue.Queue{priorityqueue.NewItem("i", CLI.PriorityMap["i"]), priorityqueue.NewItem("u", CLI.PriorityMap["u"])}
+			CLI.QueueFlags = priorityqueue.Queue{priorityqueue.NewItem("i", CLI.PriorityMap["i"]),
+				priorityqueue.NewItem("u", CLI.PriorityMap["u"])}
 
 			sort.SliceStable(CLI.QueueFlags, CLI.QueueFlags.Less)
 
@@ -214,8 +216,10 @@ func TestFSI(t *testing.T) {
 	for _, tt := range tableTest {
 		t.Run(tt.name, func(t *testing.T) {
 
-			CLI.QueueFlags = priorityqueue.Queue{priorityqueue.NewItem("f", CLI.PriorityMap["f"]), priorityqueue.NewItem("s", CLI.PriorityMap["s"]),
-				priorityqueue.NewItem(internalcli.DefaultCase, CLI.PriorityMap[internalcli.DefaultCase]), priorityqueue.NewItem("i", CLI.PriorityMap["i"])}
+			CLI.QueueFlags = priorityqueue.Queue{priorityqueue.NewItem("f", CLI.PriorityMap["f"]),
+				priorityqueue.NewItem("s", CLI.PriorityMap["s"]),
+				priorityqueue.NewItem(internalcli.DefaultCase, CLI.PriorityMap[internalcli.DefaultCase]),
+				priorityqueue.NewItem("i", CLI.PriorityMap["i"])}
 			CLI.F = tt.f
 			CLI.S = tt.s
 
@@ -277,8 +281,10 @@ func TestFSIC(t *testing.T) {
 	for _, tt := range tableTest {
 		t.Run(tt.name, func(t *testing.T) {
 
-			CLI.QueueFlags = priorityqueue.Queue{priorityqueue.NewItem("f", CLI.PriorityMap["f"]), priorityqueue.NewItem("s", CLI.PriorityMap["s"]),
-				priorityqueue.NewItem("i", CLI.PriorityMap["i"]), priorityqueue.NewItem("c", CLI.PriorityMap["c"])}
+			CLI.QueueFlags = priorityqueue.Queue{priorityqueue.NewItem("f", CLI.PriorityMap["f"]),
+				priorityqueue.NewItem("s", CLI.PriorityMap["s"]),
+				priorityqueue.NewItem("i", CLI.PriorityMap["i"]),
+				priorityqueue.NewItem("c", CLI.PriorityMap["c"])}
 			CLI.F = tt.f
 			CLI.S = tt.s
 
