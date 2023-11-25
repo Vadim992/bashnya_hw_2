@@ -73,7 +73,7 @@ func fillBuffer(lines []string) *bytes.Buffer {
 	var b bytes.Buffer
 	for _, val := range lines {
 
-		b.WriteString(fmt.Sprintf("%s\r\n", val))
+		b.WriteString(fmt.Sprintf("%s\n", val))
 	}
 	return &b
 }
