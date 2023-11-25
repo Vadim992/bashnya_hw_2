@@ -29,12 +29,9 @@ import (
 func (cli *Cli) Uniq(lines []string) *bytes.Buffer {
 
 	copyLines := make([]string, len(lines))
-
 	copy(copyLines, lines)           // создаю массив копий
 	copyLines = trimSpace(copyLines) // привожу массив копий к "эталонному виду"
-
 	for len(cli.QueueFlags) > 0 {
-
 		item := cli.QueueFlags[len(cli.QueueFlags)-1]
 
 		switch item.Value {
@@ -66,12 +63,9 @@ func (cli *Cli) Uniq(lines []string) *bytes.Buffer {
 
 			copyLines = HandleDefault(lines, copyLines)
 		}
-
 		cli.deleteLast()
 	}
-
 	return fillBuffer(copyLines)
-
 }
 
 // fillBuffer fills bytes.Buffer that I used to out data
