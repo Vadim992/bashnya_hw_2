@@ -32,6 +32,7 @@ function parse_params () {
 }
 
 function print_msg () {
+
   if [ "$3" == "0" ]; then 
       echo -e "\e[32m$1$2: SUCCESS\e[0m"
   else
@@ -43,6 +44,7 @@ function test_with_std () {
   "$path_to_bin" $params < "$path_to_input" > "$path_to_user"
   difference=$(diff "$path_to_output" "$path_to_user")
   success="$?"
+
   
   print_msg "$test_prefix" "--" "$success"
   if [ "$success" != "0" ]; then
@@ -76,7 +78,9 @@ function test_with_input_and_output() {
 fail=false
 input_files=$(ls $input_dir)
 for input_file in $input_files
+
 do
+
   test_number="${input_file:0:2}"
 
   output_user_file="${test_number}.txt"
