@@ -99,7 +99,9 @@ func outData(args []string, b *bytes.Buffer) error {
 	}
 	defer file.Close()
 
-	outResult(file, b)
+	if err = outResult(file, b); err != nil {
+		return err
+	}
 
 	return nil
 
@@ -107,6 +109,7 @@ func outData(args []string, b *bytes.Buffer) error {
 
 // outResult out data in CORRECT (Stdin or file) output
 
-func outResult(w io.Writer, b *bytes.Buffer) {
-	b.WriteTo(w)
+func outResult(w io.Writer, b *bytes.Buffer) error {
+	_, err := b.WriteTo(w)
+	return err
 }

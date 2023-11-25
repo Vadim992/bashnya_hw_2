@@ -142,7 +142,7 @@ func HandleS(lines []string, num int) []string {
 
 // deleteNumChar is called by "handleS" func for delete Char from one row
 // for deleting char I use rune
-// I delete only chars(symboles), whitespace isnot a char in my logic
+// I delete only chars(symbols), whitespace isnot a char in my logic
 // example: if string " I  love " && s=2 => canonic arr ["I","love"] => delte 2 chars => ["ove"] => result (string) "ove"
 func deleteNumChar(arr []string, num int) string {
 
