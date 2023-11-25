@@ -15,8 +15,21 @@ func TestHandleC(t *testing.T) {
 		outArr               []string
 		name                 string
 	}{
-		{[]string{"I love music.", "I love music.", "I love music.", "", "I love music of Kartik.", "I love music of Kartik.", "Thanks"},
-			[]string{"I love music.", "I love music.", "I love music.", "", "I love music of Kartik.", "I love music of Kartik.", "Thanks"},
+		{[]string{
+			"I love music.",
+			"I love music.",
+			"I love music.",
+			"",
+			"I love music of Kartik.",
+			"I love music of Kartik.",
+			"Thanks"},
+			[]string{"I love music.",
+				"I love music.",
+				"I love music.",
+				"",
+				"I love music of Kartik.",
+				"I love music of Kartik.",
+				"Thanks"},
 			[]string{"3 I love music.", "1 ", "2 I love music of Kartik.", "1 Thanks"},
 			"Test01",
 		},
@@ -259,9 +272,28 @@ func TestHandleI(t *testing.T) {
 		outArr               []string
 		name                 string
 	}{
-		{[]string{"I love music.", "I loVe music.", "I love music.", "", "I love mUSic of Kartik.", "I LOVE MUSIC of kartik.", "Thanks"},
-			[]string{"I love music.", "I loVe music.", "I love music.", "", "I love mUSic of Kartik.", "I LOVE MUSIC of kartik.", "Thanks"},
-			[]string{"i love music.", "i love music.", "i love music.", "", "i love music of kartik.", "i love music of kartik.", "thanks"},
+		{[]string{"I love music.",
+			"I loVe music.",
+			"I love music.",
+			"",
+			"I love mUSic of Kartik.",
+			"I LOVE MUSIC of kartik.",
+			"Thanks"},
+
+			[]string{"I love music.",
+				"I loVe music.",
+				"I love music.",
+				"",
+				"I love mUSic of Kartik.",
+				"I LOVE MUSIC of kartik.",
+				"Thanks"},
+			[]string{"i love music.",
+				"i love music.",
+				"i love music.",
+				"",
+				"i love music of kartik.",
+				"i love music of kartik.",
+				"thanks"},
 			"Test01",
 		},
 

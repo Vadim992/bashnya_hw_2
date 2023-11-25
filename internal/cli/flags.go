@@ -14,12 +14,18 @@ func (cli *Cli) setAllFlags() {
 		s, f       int
 	)
 
-	flag.BoolVar(&c, "c", false, "Count the number of occurrences of a string in the input data.Print this number before the string separated by a space.")
-	flag.BoolVar(&d, "d", false, "Output only those lines that are repeated in the input data.")
-	flag.BoolVar(&u, "u", false, "Output only those lines that are not repeated in the input data.")
-	flag.BoolVar(&i, "i", false, "Ignore case of letters.")
-	flag.IntVar(&f, "f", 0, "Ignore the first 'num_fields' of fields in a row. A field in a string is a non-empty set of characters separated by a space.")
-	flag.IntVar(&s, "s", 0, "Ignore the first 'num_chars' characters in the string. When used together with the -f parameter, the first characters after the num_fields of the fields are taken into account (not taking into account the space separator after the last field).")
+	flag.BoolVar(&c, "c", false,
+		"Count the number of occurrences of a string in the input data.Print this number before the string separated by a space.")
+	flag.BoolVar(&d, "d", false,
+		"Output only those lines that are repeated in the input data.")
+	flag.BoolVar(&u, "u", false,
+		"Output only those lines that are not repeated in the input data.")
+	flag.BoolVar(&i, "i", false,
+		"Ignore case of letters.")
+	flag.IntVar(&f, "f", 0,
+		"Ignore the first 'num_fields' of fields in a row. A field in a string is a non-empty set of characters separated by a space.")
+	flag.IntVar(&s, "s", 0,
+		"Ignore the first 'num_chars' characters in the string.")
 
 	flag.Parse()
 
