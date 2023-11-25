@@ -193,7 +193,8 @@ func HandleDefault(origLines, lines []string) []string {
 }
 
 // trimSpaceInside deletes all spaces inside rows
-// example input:"hi   bro" -> use strings.Split - > ["hi","","","","bro"] - this slice is argument for this func
+// example input:"hi   bro" -> use strings.Split - >
+//->["hi","","","","bro"] - this slice is argument for this func
 // output: ["hi","bro"]
 
 func trimSpaceInside(lines []string) []string {
@@ -208,7 +209,8 @@ func trimSpaceInside(lines []string) []string {
 }
 
 // trimSpaceInside deletes all spaces around rows
-// example input (line[i]): "  hi   bro   " -> output for ONE row:"hi   bro" (line[i])
+// example input (line[i]): "  hi   bro   " ->
+//-> output for ONE row:"hi   bro" (line[i])
 
 func trimSpaceAround(lines []string) []string {
 	for i := range lines {

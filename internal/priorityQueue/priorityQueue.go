@@ -7,7 +7,8 @@ type Item struct {
 	Priority int
 }
 
-// A Queue - I use this type to realise priority queue (in fact it is the slice  sorted that sorted in ascending order)
+// A Queue - I use this type to realise priority queue
+// (in fact it is the slice  sorted that sorted in ascending order)
 type Queue []*Item
 
 func NewItem(value string, priority int) *Item {

@@ -6,7 +6,10 @@ import (
 
 // check cliStruct.go to learn more CLI struct
 
-const DefaultCase = "default" // add this in priority queue if  "-c", "-d" or "-u" flags dont used when we start cli app
+const DefaultCase = "default"
+
+// add DefaultCase in priority queue
+// if  "-c", "-d" or "-u" flags dont used when we start cli app
 
 func (cli *Cli) setAllFlags() {
 	var (
@@ -36,7 +39,8 @@ func (cli *Cli) setAllFlags() {
 
 }
 
-// usageFlags func fill map cli.Flags, validate all flags,  return the priotity queue of flags ("-i" - the highest priority)
+// usageFlags func fill map cli.Flags, validate all flags,
+//return the priotity queue of flags ("-i" - the highest priority)
 // check cliStruct.go to learn more about priority of flags
 
 func (cli *Cli) usageFlags() {
